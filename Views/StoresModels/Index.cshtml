@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Chapter4CodeFirst.Models.StoresModels>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<head>
+    <style>
+        a {
+            color: white;
+        }
+    </style>
+</head>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" style="background-color:gray">
+    <tr style="background-color: dimgray">
+        <th>
+            @Html.DisplayNameFor(model => model.StoreName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StoreName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.StoreID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.StoreID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.StoreID })
+            </td>
+        </tr>
+    }
+
+</table>

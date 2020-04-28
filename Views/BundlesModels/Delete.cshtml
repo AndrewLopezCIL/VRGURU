@@ -1,0 +1,40 @@
+﻿@model Chapter4CodeFirst.Models.BundlesModels
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>BundlesModels</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HeadsetBundledID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeadsetBundledID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BundledItem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BundledItem)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-info" style="background-color:dodgerblue"/> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

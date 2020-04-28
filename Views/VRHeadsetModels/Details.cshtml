@@ -1,0 +1,42 @@
+﻿@model Chapter4CodeFirst.Models.VRHeadsetModels
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VRHeadsetModels</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AvailableStoreName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AvailableStoreName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HeadsetName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeadsetName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.HeadsetID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

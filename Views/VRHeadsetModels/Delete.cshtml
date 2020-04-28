@@ -1,0 +1,49 @@
+﻿@model Chapter4CodeFirst.Models.VRHeadsetModels
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+<p class="text-danger">@ViewBag.ErrorMessage</p> 
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>VRHeadsetModels</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AvailableStoreName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AvailableStoreName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HeadsetName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeadsetName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-info" style="background-color:dodgerblue" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,34 @@
+﻿@model Chapter4CodeFirst.Models.BundlesModels
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BundlesModels</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HeadsetBundledID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeadsetBundledID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BundledItem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BundledItem)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BundleID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
