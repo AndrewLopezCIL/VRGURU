@@ -126,7 +126,7 @@ namespace Chapter4CodeFirst.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "HeadsetID,Price,AvailableStoreID,HeadsetName")] VRHeadsetModels vRHeadsetModels)
+        public ActionResult Create([Bind(Include = "HeadsetID,Price,AvailableStoreName,HeadsetName")] VRHeadsetModels vRHeadsetModels)
         {
             try
             {

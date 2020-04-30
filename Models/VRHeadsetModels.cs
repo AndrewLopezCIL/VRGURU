@@ -13,7 +13,7 @@ namespace Chapter4CodeFirst.Models
         [Required(ErrorMessage = "Please enter a valid price.")]
         [Display(Name = "Price")]
         public double Price { get; set; }
-        [Required(ErrorMessage = "Please enter a store where the headset is available for purchase.")]
+        /*[Required(ErrorMessage = "Please enter a store where the headset is available for purchase.")]*/
         [Display(Name = "Available Store Name")]
         public string AvailableStoreName { get; set; }
         [Required(ErrorMessage = "Please enter a name for the headset.")]
