@@ -144,6 +144,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004301652184_InitialCreate.cs" />
+    <Compile Include="Migrations\202004301652184_InitialCreate.designer.cs">
+      <DependentUpon>202004301652184_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004301746198_initial.cs" />
+    <Compile Include="Migrations\202004301746198_initial.designer.cs">
+      <DependentUpon>202004301746198_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BundlesModels.cs" />
     <Compile Include="Models\StoresModels.cs" />
     <Compile Include="Models\VRHeadsetModels.cs" />
@@ -322,6 +331,14 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202004301652184_InitialCreate.resx">
+      <DependentUpon>202004301652184_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004301746198_initial.resx">
+      <DependentUpon>202004301746198_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
